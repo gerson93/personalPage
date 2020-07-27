@@ -1,6 +1,18 @@
-<div fxLayout="row">
-    <div>1. One</div>
-    <div>2. Two</div> 
-    <div>3. Three</div> 
-    <div>4. Four</div>
+<div class="container">
+    <div fxFlex *ngIf="projects">
+        <mat-card *ngFor = "let project of projects">
+            <mat-card-header>
+                <mat-card-title>{{project.title}}</mat-card-title>
+                <mat-card-subtitle> {{project.subtitle}} </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <p>
+                    {{project.description}}
+                </p>
+            </mat-card-content>
+            <mat-card-action>
+                <button mat-button>GO</button>
+            </mat-card-action>
+        </mat-card>
+    </div>
 </div>

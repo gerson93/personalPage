@@ -1,112 +1,89 @@
-import { trigger, transition, style, query, animateChild, group, animate } from "@angular/animations";
+import { trigger, transition, useAnimation, style, query, animateChild, group, animate, animation } from "@angular/animations";
+import { transitionBetweenComponent } from "./app-animations";
 
 export const routeTransitionAnimations = trigger('triggerName', [
     transition('me => project', [
-        style({position: 'relative'}),
-        query(':enter, :leave', [
-            style({
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                width: '100%'
-            })
-        ]),
-        query(':enter', [style({ right: '-100%', opacity: 0 })]),
-        query(':leave', animateChild()),
-        group([
-            query(':leave', [animate('1s ease-out', style({ right: '100%', opacity: 0 }))]),
-            query(':enter', [animate('1s ease-out', style({ right: '0%', opacity: 1 }))])
-        ]),
-        query(':enter', animateChild())
+        useAnimation(transitionBetweenComponent, {
+            params: {
+                rightPosition: '0',
+                leftPosition: '',
+                rightEnter: '-100%',
+                leftEnter: '',
+                rightAnimateLeave: '100%',
+                leftAnimateLeave: '',
+                rightAnimateEnter: '0%',
+                leftAnimateEnter: ''
+            }
+        })
     ]),
     transition('me => contact', [
-        style({position: 'relative'}),
-        query(':enter, :leave', [
-            style({
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                width: '100%'
-            })
-        ]),
-        query(':enter', [style({ right: '-100%', opacity: 0 })]),
-        query(':leave', animateChild()),
-        group([
-            query(':leave', [animate('1s ease-out', style({ right: '100%', opacity: 0 }))]),
-            query(':enter', [animate('1s ease-out', style({ right: '0%', opacity: 1 }))])
-        ]),
-        query(':enter', animateChild())
+        useAnimation(transitionBetweenComponent, {
+            params: {
+                rightPosition: '0',
+                leftPosition: '',
+                rightEnter: '-100%',
+                leftEnter: '',
+                rightAnimateLeave: '100%',
+                leftAnimateLeave: '',
+                rightAnimateEnter: '0%',
+                leftAnimateEnter: ''
+            }
+        })
     ]),
     transition('project => contact', [
-        style({position: 'relative'}),
-        query(':enter, :leave', [
-            style({
-                position: 'absolute',
-                top: 0,
-                right: 0,
-                width: '100%'
-            })
-        ]),
-        query(':enter', [style({ right: '-100%', opacity: 0 })]),
-        query(':leave', animateChild()),
-        group([
-            query(':leave', [animate('1s ease-out', style({ right: '100%', opacity: 0 }))]),
-            query(':enter', [animate('1s ease-out', style({ right: '0%', opacity: 1 }))])
-        ]),
-        query(':enter', animateChild())
+        useAnimation(transitionBetweenComponent, {
+            params: {
+                rightPosition: '0',
+                leftPosition: '',
+                rightEnter: '-100%',
+                leftEnter: '',
+                rightAnimateLeave: '100%',
+                leftAnimateLeave: '',
+                rightAnimateEnter: '0%',
+                leftAnimateEnter: ''
+            }
+        })
     ]),
     transition('project => me', [
-        style({position: 'relative'}),
-        query(':enter, :leave', [
-            style({
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%'
-            })
-        ]),
-        query(':enter', [style({ left: '-100%', opacity: 0 })]),
-        query(':leave', animateChild()),
-        group([
-            query(':leave', [animate('1s ease-out', style({ left: '100%', opacity: 0 }))]),
-            query(':enter', [animate('1s ease-out', style({ left: '0%', opacity: 1 }))])
-        ]),
-        query(':enter', animateChild())
+        useAnimation(transitionBetweenComponent, {
+            params: {
+                rightPosition: '',
+                leftPosition: '0',
+                rightEnter: '',
+                leftEnter: '-100%',
+                rightAnimateLeave: '',
+                leftAnimateLeave: '100%',
+                rightAnimateEnter: '',
+                leftAnimateEnter: '0%'
+            }
+        })
     ]),
     transition('contact => me', [
-        style({position: 'relative'}),
-        query(':enter, :leave', [
-            style({
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%'
-            })
-        ]),
-        query(':enter', [style({ left: '-100%', opacity: 0 })]),
-        query(':leave', animateChild()),
-        group([
-            query(':leave', [animate('1s ease-out', style({ left: '100%', opacity: 0 }))]),
-            query(':enter', [animate('1s ease-out', style({ left: '0%', opacity: 1 }))])
-        ]),
-        query(':enter', animateChild())
+        useAnimation(transitionBetweenComponent, {
+            params: {
+                rightPosition: '',
+                leftPosition: '0',
+                rightEnter: '',
+                leftEnter: '-100%',
+                rightAnimateLeave: '',
+                leftAnimateLeave: '100%',
+                rightAnimateEnter: '',
+                leftAnimateEnter: '0%'
+            }
+        })
     ]),
     transition('contact => project', [
-        style({position: 'relative'}),
-        query(':enter, :leave', [
-            style({
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%'
-            })
-        ]),
-        query(':enter', [style({ left: '-100%', opacity: 0 })]),
-        query(':leave', animateChild()),
-        group([
-            query(':leave', [animate('1s ease-out', style({ left: '100%', opacity: 0 }))]),
-            query(':enter', [animate('1s ease-out', style({ left: '0%', opacity: 1 }))])
-        ]),
-        query(':enter', animateChild())
+        useAnimation(transitionBetweenComponent, {
+            params: {
+                rightPosition: '',
+                leftPosition: '0',
+                rightEnter: '',
+                leftEnter: '-100%',
+                rightAnimateLeave: '',
+                leftAnimateLeave: '100%',
+                rightAnimateEnter: '',
+                leftAnimateEnter: '0%'
+            }
+        })
     ]),
 ])

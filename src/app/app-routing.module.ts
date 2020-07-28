@@ -6,9 +6,10 @@ import { MeComponent } from "./me/me.component";
 import { ContactComponent } from "./contact/contact.component";
 
 const routes: Routes = [
-  { path: 'projects', component: ProjectsComponent},
-  { path: 'me', component: MeComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: '', component: MeComponent },
+  { path: 'projects', component: ProjectsComponent, data: {animationState: 'project'}},
+  { path: 'me', component: MeComponent, data: {animationState: 'me'}},
+  { path: 'contact', component: ContactComponent, data: {animationState: 'contact'}}
 ]
 
 

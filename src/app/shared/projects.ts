@@ -25,5 +25,29 @@ export const PROJECTS: Project [] = [
         subtitle: 'project4',
         description: 'some day'
     },
+    {
+        id: 4,
+        title: 'project5',
+        subtitle: 'project5',
+        description: 'some day'
+    },
+    {
+        id: 5,
+        title: 'project6',
+        subtitle: 'project6',
+        description: 'some day'
+    },
+    {
+        id: 6,
+        title: 'project7',
+        subtitle: 'project7',
+        description: 'some day'
+    },
+    {
+        id: 7,
+        title: 'project8',
+        subtitle: 'project8',
+        description: 'some day'
+    },
 
 ]

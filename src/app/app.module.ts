@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
 
 import { MatToolbarModule } from "@angular/material/toolbar";
@@ -27,6 +28,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FlexLayoutModule,
     MatButtonModule,
     MatIconModule,
